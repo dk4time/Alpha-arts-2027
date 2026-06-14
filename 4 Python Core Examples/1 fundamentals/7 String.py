@@ -6,9 +6,7 @@ Author: Digital Flash Notes
 # Creating Strings
 
 name = "Python Programming"
-
 print(name)
-
 
 # Accessing Characters
 
@@ -69,8 +67,8 @@ print(name.replace("Python", "Java"))
 
 # find(sub)
 # str | Params: sub (Required) | Returns: int | O(n)
-
-print(name.find("Programming"))
+# print("index", name.index("sdfhj"))
+print("find", name.find("jalskdfj"))
 
 
 # count(sub)
@@ -97,6 +95,7 @@ print(name.endswith("Programming"))
 sentence = "Java Python JavaScript"
 
 words = sentence.split()
+print(words)
 
 print(words)
 
@@ -107,6 +106,9 @@ print(words)
 languages = ["Java", "Python", "C++"]
 
 print(" | ".join(languages))
+
+name = "dinesh"
+print("Sorted", "".join(sorted(name)))
 
 
 # String Membership

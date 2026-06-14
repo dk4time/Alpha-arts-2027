@@ -132,3 +132,27 @@ matrix = [
 ]
 
 print(matrix[1][0])
+
+#slicing
+#[start(default=0):end(default=len):skip(1)]
+nums = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(nums[4:7:2])
+
+print(nums[-1: -(len(nums)+1): -1])
+
+print(nums[::-1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+

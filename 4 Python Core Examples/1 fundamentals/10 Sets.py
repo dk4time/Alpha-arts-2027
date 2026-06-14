@@ -1,10 +1,11 @@
 """
 Topic: Sets
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Creating Sets
 
+nums = set()
 numbers = {10, 20, 30, 40}
 
 print(numbers)
@@ -13,10 +14,8 @@ print(numbers)
 # add(item)
 # set | Params: item (Required) | Returns: None | O(1)
 
-numbers.add(50)
-
+numbers.add(12)
 print(numbers)
-
 
 # update(iterable)
 # set | Params: iterable (Required) | Returns: None | O(k)
@@ -32,7 +31,6 @@ print(numbers)
 numbers.remove(20)
 
 print(numbers)
-
 
 # discard(item)
 # set | Params: item (Required) | Returns: None | O(1)
