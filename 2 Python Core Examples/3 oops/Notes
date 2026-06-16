@@ -1,5 +1,3 @@
-'''
-
 # Python OOP – Short Notes
 
 ## 1. Object-Oriented Programming (OOP)
@@ -25,10 +23,10 @@ It contains:
 * **Properties** (Instance Variables)
 * **Behaviors** (Methods)
 
-```python
+Example:
 class Student:
     pass
-```
+
 
 ---
 
@@ -36,9 +34,9 @@ class Student:
 
 An **Object** is an instance of a class.
 
-```python
+Example:
 s1 = Student()
-```
+
 
 Here `s1` is an object of `Student`.
 
@@ -53,12 +51,12 @@ A constructor is a special method that executes automatically when an object is 
 * Allocate memory
 * Initialize object variables
 
-```python
+Example:
 class Student:
 
     def __init__(self, name):
         self.name = name
-```
+
 
 ---
 
@@ -66,12 +64,12 @@ class Student:
 
 `self` refers to the current object of the class.
 
-```python
+Example:
 class Student:
 
     def display(self):
         print("Hello")
-```
+
 
 Without `self`, instance variables and methods cannot be accessed.
 
@@ -81,12 +79,12 @@ Without `self`, instance variables and methods cannot be accessed.
 
 A method is a function defined inside a class.
 
-```python
+Example:
 class Student:
 
     def display(self):
         print("Student Method")
-```
+
 
 ---
 
@@ -100,15 +98,15 @@ One class contains another object's reference.
 
 Object is created **outside** the class.
 
-### Example
+### Example:
 
 * Bank has Customers
 
-```python
+Example:
 customer = Customer()
 
 bank = Bank(customer)
-```
+
 
 ### Characteristics
 
@@ -123,16 +121,16 @@ One class owns another object.
 
 Object is created **inside** the class.
 
-### Example
+### Example:
 
 * Bank has Address
 
-```python
+Example:
 class Bank:
 
     def __init__(self):
         self.address = Address()
-```
+
 
 ### Characteristics
 
@@ -144,19 +142,18 @@ class Bank:
 ## 9. Inheritance (IS-A)
 
 One class acquires properties and methods from another class.
-Object class is the superclass of all other classes
 
-### Example
+### Example:
 
 * Customer is a Person
 
-```python
+Example:
 class Person:
     pass
 
 class Customer(Person):
     pass
-```
+
 
 ### Advantages
 
@@ -173,19 +170,19 @@ class Customer(Person):
 
 One Parent → One Child
 
-```python
+Example:
 Parent
    ↓
  Child
-```
 
-```python
+
+Example:
 class Parent:
     pass
 
 class Child(Parent):
     pass
-```
+
 
 ---
 
@@ -193,15 +190,15 @@ class Child(Parent):
 
 Multiple Parents → One Child
 
-```python
+Example:
 Father
     \
      Child
     /
 Mother
-```
 
-```python
+
+Example:
 class Father:
     pass
 
@@ -210,29 +207,29 @@ class Mother:
 
 class Child(Father, Mother):
     pass
-```
+
 
 ### MRO (Method Resolution Order)
 
 Python follows **Left to Right** order.
 
-```python
+Example:
 Child → Father → Mother → Object
-```
+
 
 ---
 
 ## Multilevel Inheritance
 
-```text
+text
 GrandParent
      ↓
    Parent
      ↓
     Child
-```
 
-```python
+
+Example:
 class GrandParent:
     pass
 
@@ -241,7 +238,7 @@ class Parent(GrandParent):
 
 class Child(Parent):
     pass
-```
+
 
 ---
 
@@ -249,11 +246,11 @@ class Child(Parent):
 
 One Parent → Multiple Children
 
-```text
+text
         Parent
         /    \
     Child1  Child2
-```
+
 
 ---
 
@@ -267,11 +264,11 @@ Combination of Multiple Types of Inheritance.
 
 One object uses another object temporarily.
 
-### Example
+### Example:
 
 * Customer uses ATM
 
-```python
+Example:
 class ATM:
     pass
 
@@ -279,7 +276,7 @@ class Customer:
 
     def withdraw(self, atm):
         pass
-```
+
 
 ### Characteristics
 
@@ -302,10 +299,10 @@ Same method behaves differently in different classes.
 
 Python does not support true method overloading.
 
-```python
+Example:
 def add(a, b=0):
     return a + b
-```
+
 
 ---
 
@@ -313,7 +310,7 @@ def add(a, b=0):
 
 (Method Overriding)
 
-```python
+Example:
 class Animal:
 
     def sound(self):
@@ -324,7 +321,7 @@ class Dog(Animal):
 
     def sound(self):
         print("Bark")
-```
+
 
 ---
 
@@ -336,12 +333,12 @@ Binding data and methods into a single unit.
 
 **Data Hiding + Data Binding**
 
-```python
+Example:
 class User:
 
     def __init__(self):
         self.__password = "1234"
-```
+
 
 ### Purpose
 
@@ -358,7 +355,7 @@ Showing only essential details and hiding implementation.
 
 **Behavior Showing + Implementation Hiding**
 
-```python
+Example:
 from abc import ABC, abstractmethod
 
 class Payment(ABC):
@@ -366,7 +363,7 @@ class Payment(ABC):
     @abstractmethod
     def pay(self):
         pass
-```
+
 
 ### Purpose
 
@@ -397,13 +394,13 @@ Mechanism to handle runtime errors gracefully.
 * `finally`
 * `raise`
 
-```python
+Example:
 try:
     print(10 / 0)
 
 except ZeroDivisionError:
     print("Cannot Divide By Zero")
-```
+
 
 ---
 
@@ -411,22 +408,22 @@ except ZeroDivisionError:
 
 Always executes.
 
-```python
+Example:
 try:
     pass
 
 finally:
     print("Completed")
-```
+
 
 ---
 
 ## Custom Exception
 
-```python
+Example:
 class InvalidAgeError(Exception):
     pass
-```
+
 
 ---
 
@@ -440,9 +437,9 @@ Python does not have true access modifiers like Java, but follows conventions.
 
 Accessible everywhere.
 
-```python
+Example:
 self.name
-```
+
 
 ---
 
@@ -450,9 +447,9 @@ self.name
 
 Single underscore `_`
 
-```python
+Example:
 self._name
-```
+
 
 Accessible inside class and subclasses.
 
@@ -462,9 +459,9 @@ Accessible inside class and subclasses.
 
 Double underscore `__`
 
-```python
+Example:
 self.__password
-```
+
 
 Accessible only within the class.
 
@@ -493,7 +490,7 @@ Accessible only within the class.
 
 ### Memory Shortcut
 
-```text
+text
 Class      → Blueprint
 Object     → Instance
 Inheritance→ IS-A
@@ -504,7 +501,4 @@ Polymorphism→ Many Forms
 Encapsulation→ Hide Data
 Abstraction→ Hide Logic
 Exception→ Handle Errors
-```
 
-
-'''

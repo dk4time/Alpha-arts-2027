@@ -1,6 +1,6 @@
 """
 Topic: Abstraction
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 from abc import ABC, abstractmethod

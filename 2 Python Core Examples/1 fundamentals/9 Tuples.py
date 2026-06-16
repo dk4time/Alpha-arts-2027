@@ -1,6 +1,6 @@
 """
 Topic: Tuples
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Creating Tuples

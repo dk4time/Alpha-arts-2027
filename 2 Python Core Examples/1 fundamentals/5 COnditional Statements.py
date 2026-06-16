@@ -1,6 +1,6 @@
 """
 Topic: Conditional Statements
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Simple if

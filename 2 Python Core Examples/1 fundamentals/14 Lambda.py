@@ -1,6 +1,6 @@
 """
 Topic: Lambda
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Basic Lambda

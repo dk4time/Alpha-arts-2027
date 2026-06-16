@@ -1,6 +1,6 @@
 """
 Topic: OOP Problem Solving
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # ==================================================

@@ -1,6 +1,6 @@
 """
 Topic: Exception Handling
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # ==================================================

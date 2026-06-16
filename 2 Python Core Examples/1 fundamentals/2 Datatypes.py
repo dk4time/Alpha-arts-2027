@@ -1,6 +1,6 @@
 """
 Topic: Data Types
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Integer

@@ -1,6 +1,6 @@
 """
 Topic: Loops
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # for loop

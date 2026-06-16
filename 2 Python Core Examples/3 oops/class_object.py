@@ -6,6 +6,9 @@ class Car:
     def start_engine(self):
         print(f"{self.brand} engine started.")
 
+    def __str__(self):
+        return f"{self.brand} engine started."
+
 # Creating objects
 car1 = Car("Toyota", "Red")
 car2 = Car("Honda", "Blue")

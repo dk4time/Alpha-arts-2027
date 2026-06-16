@@ -11,6 +11,7 @@ class Car(Vehicle):
         self.brand = brand
 
     def move(self):
+        print(f"Type: {self.type}")
         print(f"The {self.brand} car is zooming on the road.")
 
 # Inheritance in action
@@ -19,3 +20,19 @@ vehicle.move()  # Output: The bike is moving.
 
 car = Car("Tesla")
 car.move()  # Output: The Tesla car is zooming on the road.
+
+#MULTIPLE INHERITANCE
+
+class A:
+    def display(self):
+        print("Class A")
+class B:
+    def display(self):
+        print("Class B")
+
+class C(B, A):
+    pass
+
+obj = C()
+
+obj.display()

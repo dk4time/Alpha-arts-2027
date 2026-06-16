@@ -1,6 +1,6 @@
 """
 Topic: File Handling
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Writing To File

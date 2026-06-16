@@ -1,6 +1,6 @@
 """
 Topic: Recursion
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Factorial

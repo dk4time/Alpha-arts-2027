@@ -1,6 +1,6 @@
 """
 Topic: Lists
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Creating Lists

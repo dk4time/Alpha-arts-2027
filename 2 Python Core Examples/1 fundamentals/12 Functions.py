@@ -1,6 +1,6 @@
 """
 Topic: Functions
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Function Without Parameters

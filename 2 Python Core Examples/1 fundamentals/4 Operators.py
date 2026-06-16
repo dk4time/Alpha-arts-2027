@@ -1,6 +1,6 @@
 """
 Topic: Operators
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 a = 20

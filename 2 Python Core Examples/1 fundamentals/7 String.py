@@ -1,6 +1,6 @@
 """
 Topic: Strings
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Creating Strings

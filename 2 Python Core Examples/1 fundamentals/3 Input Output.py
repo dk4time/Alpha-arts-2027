@@ -1,6 +1,6 @@
 """
 Topic: Input Output
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Basic output

@@ -1,6 +1,6 @@
 """
 Topic: Variables
-Author: Digital Flash Notes
+Author: Dineshkumar
 """
 
 # Creating variables
