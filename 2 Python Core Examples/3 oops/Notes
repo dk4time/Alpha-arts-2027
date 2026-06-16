@@ -1,0 +1,510 @@
+'''
+
+# Python OOP – Short Notes
+
+## 1. Object-Oriented Programming (OOP)
+
+OOP is a programming paradigm that organizes code using **Classes** and **Objects**.
+
+### Benefits
+
+* Code Reusability
+* Modularity
+* Security
+* Easy Maintenance
+* Real-world Modeling
+
+---
+
+# 2. Class
+
+A **Class** is a blueprint/template used to create objects.
+
+It contains:
+
+* **Properties** (Instance Variables)
+* **Behaviors** (Methods)
+
+```python
+class Student:
+    pass
+```
+
+---
+
+# 3. Object
+
+An **Object** is an instance of a class.
+
+```python
+s1 = Student()
+```
+
+Here `s1` is an object of `Student`.
+
+---
+
+# 4. Constructor
+
+A constructor is a special method that executes automatically when an object is created.
+
+### Purpose
+
+* Allocate memory
+* Initialize object variables
+
+```python
+class Student:
+
+    def __init__(self, name):
+        self.name = name
+```
+
+---
+
+# 5. self Keyword
+
+`self` refers to the current object of the class.
+
+```python
+class Student:
+
+    def display(self):
+        print("Hello")
+```
+
+Without `self`, instance variables and methods cannot be accessed.
+
+---
+
+# 6. Method
+
+A method is a function defined inside a class.
+
+```python
+class Student:
+
+    def display(self):
+        print("Student Method")
+```
+
+---
+
+# Relationships in OOP
+
+---
+
+## 7. Aggregation (HAS-A)
+
+One class contains another object's reference.
+
+Object is created **outside** the class.
+
+### Example
+
+* Bank has Customers
+
+```python
+customer = Customer()
+
+bank = Bank(customer)
+```
+
+### Characteristics
+
+* Weak Relationship
+* Independent Objects
+
+---
+
+## 8. Composition (HAS-A)
+
+One class owns another object.
+
+Object is created **inside** the class.
+
+### Example
+
+* Bank has Address
+
+```python
+class Bank:
+
+    def __init__(self):
+        self.address = Address()
+```
+
+### Characteristics
+
+* Strong Relationship
+* Dependent Objects
+
+---
+
+## 9. Inheritance (IS-A)
+
+One class acquires properties and methods from another class.
+Object class is the superclass of all other classes
+
+### Example
+
+* Customer is a Person
+
+```python
+class Person:
+    pass
+
+class Customer(Person):
+    pass
+```
+
+### Advantages
+
+* Reusability
+* Extensibility
+
+---
+
+# Types of Inheritance
+
+---
+
+## Single Inheritance
+
+One Parent → One Child
+
+```python
+Parent
+   ↓
+ Child
+```
+
+```python
+class Parent:
+    pass
+
+class Child(Parent):
+    pass
+```
+
+---
+
+## Multiple Inheritance
+
+Multiple Parents → One Child
+
+```python
+Father
+    \
+     Child
+    /
+Mother
+```
+
+```python
+class Father:
+    pass
+
+class Mother:
+    pass
+
+class Child(Father, Mother):
+    pass
+```
+
+### MRO (Method Resolution Order)
+
+Python follows **Left to Right** order.
+
+```python
+Child → Father → Mother → Object
+```
+
+---
+
+## Multilevel Inheritance
+
+```text
+GrandParent
+     ↓
+   Parent
+     ↓
+    Child
+```
+
+```python
+class GrandParent:
+    pass
+
+class Parent(GrandParent):
+    pass
+
+class Child(Parent):
+    pass
+```
+
+---
+
+## Hierarchical Inheritance
+
+One Parent → Multiple Children
+
+```text
+        Parent
+        /    \
+    Child1  Child2
+```
+
+---
+
+## Hybrid Inheritance
+
+Combination of Multiple Types of Inheritance.
+
+---
+
+## 10. Association (USES-A)
+
+One object uses another object temporarily.
+
+### Example
+
+* Customer uses ATM
+
+```python
+class ATM:
+    pass
+
+class Customer:
+
+    def withdraw(self, atm):
+        pass
+```
+
+### Characteristics
+
+* Weakest Relationship
+* Local Usage
+
+---
+
+# 11. Polymorphism
+
+Polymorphism means **Many Forms**.
+
+Same method behaves differently in different classes.
+
+---
+
+## Compile-Time Polymorphism
+
+(Method Overloading)
+
+Python does not support true method overloading.
+
+```python
+def add(a, b=0):
+    return a + b
+```
+
+---
+
+## Runtime Polymorphism
+
+(Method Overriding)
+
+```python
+class Animal:
+
+    def sound(self):
+        print("Animal Sound")
+
+
+class Dog(Animal):
+
+    def sound(self):
+        print("Bark")
+```
+
+---
+
+# 12. Encapsulation
+
+Binding data and methods into a single unit.
+
+### Definition
+
+**Data Hiding + Data Binding**
+
+```python
+class User:
+
+    def __init__(self):
+        self.__password = "1234"
+```
+
+### Purpose
+
+* Security
+* Controlled Access
+
+---
+
+# 13. Abstraction
+
+Showing only essential details and hiding implementation.
+
+### Definition
+
+**Behavior Showing + Implementation Hiding**
+
+```python
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self):
+        pass
+```
+
+### Purpose
+
+* Simplicity
+* Better Design
+
+---
+
+# Encapsulation vs Abstraction
+
+| Encapsulation         | Abstraction                              |
+| --------------------- | ---------------------------------------- |
+| Hides Data            | Hides Implementation                     |
+| Data Hiding + Binding | Behavior Showing + Implementation Hiding |
+| Uses Access Modifiers | Uses Abstract Classes                    |
+| Security              | Simplicity                               |
+
+---
+
+# 14. Exception Handling
+
+Mechanism to handle runtime errors gracefully.
+
+### Keywords
+
+* `try`
+* `except`
+* `finally`
+* `raise`
+
+```python
+try:
+    print(10 / 0)
+
+except ZeroDivisionError:
+    print("Cannot Divide By Zero")
+```
+
+---
+
+## finally Block
+
+Always executes.
+
+```python
+try:
+    pass
+
+finally:
+    print("Completed")
+```
+
+---
+
+## Custom Exception
+
+```python
+class InvalidAgeError(Exception):
+    pass
+```
+
+---
+
+# Access Modifiers
+
+Python does not have true access modifiers like Java, but follows conventions.
+
+---
+
+## Public
+
+Accessible everywhere.
+
+```python
+self.name
+```
+
+---
+
+## Protected
+
+Single underscore `_`
+
+```python
+self._name
+```
+
+Accessible inside class and subclasses.
+
+---
+
+## Private
+
+Double underscore `__`
+
+```python
+self.__password
+```
+
+Accessible only within the class.
+
+---
+
+# Quick Revision
+
+| Concept            | Meaning                  |
+| ------------------ | ------------------------ |
+| Class              | Blueprint                |
+| Object             | Instance of Class        |
+| Constructor        | Initializes Object       |
+| self               | Current Object Reference |
+| Method             | Function inside Class    |
+| Aggregation        | HAS-A (Weak)             |
+| Composition        | HAS-A (Strong)           |
+| Inheritance        | IS-A                     |
+| Association        | USES-A                   |
+| Polymorphism       | Many Forms               |
+| Encapsulation      | Data Hiding + Binding    |
+| Abstraction        | Implementation Hiding    |
+| Exception Handling | Runtime Error Handling   |
+| Public             | Everywhere               |
+| Protected          | Class + Subclass         |
+| Private            | Inside Class Only        |
+
+### Memory Shortcut
+
+```text
+Class      → Blueprint
+Object     → Instance
+Inheritance→ IS-A
+Aggregation→ HAS-A (Weak)
+Composition→ HAS-A (Strong)
+Association→ USES-A
+Polymorphism→ Many Forms
+Encapsulation→ Hide Data
+Abstraction→ Hide Logic
+Exception→ Handle Errors
+```
+
+
+'''
